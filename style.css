@@ -1,0 +1,154 @@
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== CORPO DA PÁGINA ===== */
+body {
+  background-color: #0d0d0d; /* preto quase puro */
+  color: #e0e0e0;            /* cinza claro para textos */
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+/* ===== CABEÇALHO ===== */
+.cabecalho {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cabecalho h1 {
+  color: #39ff14; /* verde neon */
+  font-size: 2rem;
+  text-shadow: 0 0 10px #39ff14; /* brilho neon */
+}
+
+.subtitulo {
+  color: #39ff14;
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+.estudante {
+  color: #888; /* cinza escuro */
+  font-size: 0.95rem;
+  margin-top: 5px;
+}
+
+/* ===== CARDS DE RESUMO ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #1a1a1a;      /* cinza escuro */
+  border: 1px solid #39ff14;      /* borda verde neon */
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.4); /* brilho neon */
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.8);
+}
+
+.card-titulo {
+  display: block;
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-valor {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #39ff14;
+}
+
+.card-extra {
+  display: block;
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+/* ===== TABELA ===== */
+.tabela-container {
+  overflow-x: auto; /* permite rolar no celular */
+  border-radius: 10px;
+  border: 1px solid #39ff14;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+}
+
+.boletim {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px; /* força rolagem em telas pequenas */
+}
+
+.boletim thead {
+  background-color: #1a1a1a;
+}
+
+.boletim th {
+  color: #39ff14;
+  padding: 12px;
+  text-align: left;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #39ff14;
+}
+
+.boletim td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #2a2a2a;
+  font-size: 0.9rem;
+}
+
+.boletim tbody tr:hover {
+  background-color: #1f1f1f;
+}
+
+/* Cores das situações */
+.situacao-bom {
+  color: #39ff14; /* verde neon */
+  font-weight: bold;
+}
+
+.situacao-atencao {
+  color: #ff4d4d; /* vermelho para chamar atenção */
+  font-weight: bold;
+}
+
+.situacao-indisponivel {
+  color: #888; /* cinza */
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+  .cabecalho h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-valor {
+    font-size: 1.4rem;
+  }
+
+  .boletim th,
+  .boletim td {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}

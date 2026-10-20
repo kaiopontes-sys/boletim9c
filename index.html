@@ -8,57 +8,97 @@
 </head>
 <body>
 
-  <!-- CABEÇALHO -->
-  <header class="cabecalho">
-    <h1>Boletim Digital</h1>
-    <p class="subtitulo">9º Ano</p>
-    <p class="estudante">Estudante Exemplo</p>
-  </header>
+  <!-- ÁREA DE ACESSO (PIN) -->
+  <section id="area-login" class="area-login">
+    <div class="login-box">
+      <h2>Acesso ao Boletim</h2>
+      <p class="login-info">Turma: <strong>9C</strong> | Chamada: <strong>19</strong></p>
+      
+      <div class="campo-pin">
+        <label for="input-pin">Digite seu PIN:</label>
+        <input type="password" id="input-pin" maxlength="10" placeholder="PIN" autocomplete="off">
+      </div>
 
-  <!-- CARDS DE RESUMO -->
-  <section class="cards">
-    <div class="card">
-      <span class="card-titulo">Média geral</span>
-      <span class="card-valor" id="media-geral">—</span>
-    </div>
-    <div class="card">
-      <span class="card-titulo">Total de faltas</span>
-      <span class="card-valor" id="total-faltas">—</span>
-    </div>
-    <div class="card">
-      <span class="card-titulo">Bom desempenho</span>
-      <span class="card-valor" id="total-bom">—</span>
-    </div>
-    <div class="card">
-      <span class="card-titulo">Precisam de atenção</span>
-      <span class="card-valor" id="total-atencao">—</span>
-    </div>
-    <div class="card">
-      <span class="card-titulo">Frequência</span>
-      <span class="card-valor" id="frequencia">—</span>
-      <span class="card-extra" id="frequencia-texto">—</span>
+      <button type="button" id="btn-entrar" class="btn">Entrar</button>
+      <p id="mensagem-login" class="mensagem"></p>
     </div>
   </section>
 
-  <!-- TABELA DE NOTAS -->
-  <section class="tabela-container">
-    <table class="boletim">
-      <thead>
-        <tr>
-          <th>Disciplina</th>
-          <th>1º Tri</th>
-          <th>2º Tri</th>
-          <th>3º Tri</th>
-          <th>Média</th>
-          <th>Faltas</th>
-          <th>Situação</th>
-        </tr>
-      </thead>
-      <tbody id="corpo-tabela">
-        <!-- As linhas serão criadas pelo JavaScript -->
-      </tbody>
-    </table>
-  </section>
+  <!-- CONTEÚDO DO BOLETIM (OCULTO ANTES DO LOGIN) -->
+  <div id="conteudo-boletim" class="escondido">
+    
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+      <h1>Boletim Digital</h1>
+      <p class="subtitulo">9º Ano - Turma 9C (Nº 19)</p>
+      <p class="estudante">Estudante Exemplo</p>
+      
+      <div class="acoes-boletim">
+        <button type="button" id="btn-alternar-edicao" class="btn btn-secundario">Alterar dados</button>
+      </div>
+    </header>
+
+    <!-- CARDS DE RESUMO -->
+    <section class="cards">
+      <div class="card">
+        <span class="card-titulo">Média geral</span>
+        <span class="card-valor" id="media-geral">—</span>
+      </div>
+      <div class="card">
+        <span class="card-titulo">Total de faltas</span>
+        <span class="card-valor" id="total-faltas">—</span>
+      </div>
+      <div class="card">
+        <span class="card-titulo">Bom desempenho</span>
+        <span class="card-valor" id="total-bom">—</span>
+      </div>
+      <div class="card">
+        <span class="card-titulo">Precisam de atenção</span>
+        <span class="card-valor" id="total-atencao">—</span>
+      </div>
+      <div class="card">
+        <span class="card-titulo">Frequência</span>
+        <span class="card-valor" id="frequencia">—</span>
+        <span class="card-extra" id="frequencia-texto">—</span>
+      </div>
+    </section>
+
+    <!-- PAINEL DE EDIÇÃO (OCULTO INICIALMENTE) -->
+    <section id="painel-edicao" class="painel-edicao escondido">
+      <h3>Editar Notas e Faltas</h3>
+      <p class="instrucao-edicao">Digite notas entre 0 e 10 (use ponto ou vírgula). Faltas devem ser números inteiros (0 ou mais).</p>
+      
+      <div id="container-formulario-edicao" class="formulario-edicao">
+        <!-- Campos gerados via JS -->
+      </div>
+
+      <div class="acoes-edicao">
+        <button type="button" id="btn-salvar" class="btn">Salvar alterações</button>
+        <span id="mensagem-salvar" class="mensagem"></span>
+      </div>
+    </section>
+
+    <!-- TABELA DE NOTAS -->
+    <section class="tabela-container">
+      <table class="boletim">
+        <thead>
+          <tr>
+            <th>Disciplina</th>
+            <th>1º Tri</th>
+            <th>2º Tri</th>
+            <th>3º Tri</th>
+            <th>Média</th>
+            <th>Faltas</th>
+            <th>Situação</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-tabela">
+          <!-- As linhas serão criadas pelo JavaScript -->
+        </tbody>
+      </table>
+    </section>
+
+  </div>
 
   <script src="script.js"></script>
 </body>

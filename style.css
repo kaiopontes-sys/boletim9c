@@ -14,6 +14,123 @@ body {
   line-height: 1.5;
 }
 
+/* ===== CLASSES DE EXIBIÇÃO ===== */
+.escondido {
+  display: none !important;
+}
+
+/* ===== ÁREA DE LOGIN (PIN) ===== */
+.area-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.login-box {
+  background-color: #1a1a1a;
+  border: 1px solid #39ff14;
+  border-radius: 10px;
+  padding: 30px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+}
+
+.login-box h2 {
+  color: #39ff14;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  text-shadow: 0 0 8px #39ff14;
+}
+
+.login-info {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.login-info strong {
+  color: #39ff14;
+}
+
+.campo-pin {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.campo-pin label {
+  display: block;
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.campo-pin input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #0d0d0d;
+  color: #39ff14;
+  font-size: 1.2rem;
+  text-align: center;
+  letter-spacing: 3px;
+  outline: none;
+}
+
+.campo-pin input:focus {
+  border-color: #39ff14;
+  box-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+  background-color: #39ff14;
+  color: #0d0d0d;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #32cd12;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.6);
+}
+
+.btn-secundario {
+  background-color: transparent;
+  color: #39ff14;
+  border: 1px solid #39ff14;
+}
+
+.btn-secundario:hover {
+  background-color: rgba(57, 255, 20, 0.1);
+}
+
+.mensagem {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.mensagem.erro {
+  color: #ff4d4d;
+}
+
+.mensagem.sucesso {
+  color: #39ff14;
+}
+
+.mensagem.info {
+  color: #aaa;
+}
+
 /* ===== CABEÇALHO ===== */
 .cabecalho {
   text-align: center;
@@ -36,6 +153,96 @@ body {
   color: #888; /* cinza escuro */
   font-size: 0.95rem;
   margin-top: 5px;
+}
+
+.acoes-boletim {
+  margin-top: 15px;
+}
+
+/* ===== PAINEL DE EDIÇÃO ===== */
+.painel-edicao {
+  background-color: #1a1a1a;
+  border: 1px solid #39ff14;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+}
+
+.painel-edicao h3 {
+  color: #39ff14;
+  margin-bottom: 5px;
+}
+
+.instrucao-edicao {
+  color: #aaa;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+.formulario-edicao {
+  display: grid;
+  gap: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 15px;
+}
+
+.linha-edicao {
+  background-color: #0d0d0d;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.nome-disciplina-edicao {
+  color: #39ff14;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.campos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-grupo label {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 3px;
+}
+
+.campo-grupo input {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #fff;
+  padding: 6px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.campo-grupo input:focus {
+  border-color: #39ff14;
+}
+
+.campo-grupo input.invalido {
+  border-color: #ff4d4d;
+  background-color: rgba(255, 77, 77, 0.1);
+}
+
+.acoes-edicao {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 /* ===== CARDS DE RESUMO ===== */
@@ -150,5 +357,9 @@ body {
   .boletim td {
     padding: 8px;
     font-size: 0.8rem;
+  }
+
+  .campos-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

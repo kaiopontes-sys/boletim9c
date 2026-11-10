@@ -63,6 +63,31 @@
       </div>
     </section>
 
+    <!-- ÁREA DE GRÁFICOS -->
+    <section class="area-graficos">
+      <article class="grafico-card">
+        <h2>Média por disciplina</h2>
+        <div class="grafico-container grafico-container-medio">
+          <canvas id="graficoMediasDisciplinas"></canvas>
+        </div>
+      </article>
+
+      <article class="grafico-card">
+        <h2>Evolução da média geral</h2>
+        <div class="grafico-container grafico-container-curto">
+          <canvas id="graficoEvolucaoTrimestres"></canvas>
+        </div>
+      </article>
+
+      <article class="grafico-card" id="card-faltas">
+        <h2>Faltas por trimestre</h2>
+        <div id="estado-faltas"></div>
+        <div class="grafico-container grafico-container-curto">
+          <canvas id="graficoFaltasTrimestres"></canvas>
+        </div>
+      </article>
+    </section>
+
     <!-- PAINEL DE EDIÇÃO (OCULTO INICIALMENTE) -->
     <section id="painel-edicao" class="painel-edicao escondido">
       <h3>Editar Notas e Faltas</h3>
@@ -100,6 +125,7 @@
 
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
